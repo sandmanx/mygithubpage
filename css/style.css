@@ -1,0 +1,313 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+.spider__inner {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.spider__inner .legs--left .one, .spider__inner .legs--left .three, .spider__inner .legs--right .two, .spider__inner .legs--right .four {
+  -webkit-animation-name: creep;
+          animation-name: creep;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.spider__inner .legs--left .two, .spider__inner .legs--left .four, .spider__inner .legs--right .one, .spider__inner .legs--right .three {
+  -webkit-animation-name: creep-alt;
+          animation-name: creep-alt;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.spider__inner .body {
+  -webkit-animation-name: body-creep;
+          animation-name: body-creep;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
+  -webkit-animation-timing-function: cubic-bezier(0.365, 0.005, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.365, 0.005, 0.355, 1);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes drip {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes drip {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes creep {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  70%, 100% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+}
+@keyframes creep {
+  0% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  70%, 100% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+}
+@-webkit-keyframes creep-alt {
+  0% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  70%, 100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+@keyframes creep-alt {
+  0% {
+    -webkit-transform: rotate(8deg);
+            transform: rotate(8deg);
+  }
+  70%, 100% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+}
+@-webkit-keyframes body-creep {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+@keyframes body-creep {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+html {
+  font-size: 10px;
+  background: #ffffff url("http://engage-codepen.s3.amazonaws.com/2016/spider/dots-blue.png") 0 0;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  height: 600px;
+  background: #1B2240 url("http://engage-codepen.s3.amazonaws.com/2016/spider/dots-red.png") 0 0;
+}
+
+span {
+  display: block;
+}
+
+#spider {
+  z-index: 2000;
+  position: absolute;
+  top: -32rem;
+  left: -42rem;
+  width: 47.5rem;
+  height: 52.6rem;
+}
+
+.spider__inner {
+  position: relative;
+  width: 47.5rem;
+  height: 52.6rem;
+  -webkit-transform: scale(0.2) rotate(90deg);
+          transform: scale(0.2) rotate(90deg);
+}
+@media screen and (min-width: 1024px) {
+  .spider__inner {
+    -webkit-transform: scale(0.3) rotate(90deg);
+            transform: scale(0.3) rotate(90deg);
+  }
+}
+.spider__inner .body, .spider__inner .one, .spider__inner .two, .spider__inner .three, .spider__inner .four {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.spider__inner .body {
+  top: 16%;
+  left: 36%;
+  width: 14rem;
+  height: 37.5rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/body.png");
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.spider__inner .legs--left .one {
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
+  top: 4rem;
+  left: 5.5rem;
+  width: 13.8rem;
+  height: 16.1rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-left-one.png");
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+.spider__inner .legs--left .two {
+  top: 17.6rem;
+  left: 1rem;
+  width: 17.3rem;
+  height: 7.6rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-left-two.png");
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+.spider__inner .legs--left .three {
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
+  top: 25.6rem;
+  left: 3.4rem;
+  width: 16.4rem;
+  height: 5.8rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-left-three.png");
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+}
+.spider__inner .legs--left .four {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  left: 8.1rem;
+  bottom: 3rem;
+  width: 13.1rem;
+  height: 22.5rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-left-four.png");
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+.spider__inner .legs--right .one {
+  -webkit-animation-delay: .75s;
+          animation-delay: .75s;
+  top: 4rem;
+  right: 5.5rem;
+  width: 14.6rem;
+  height: 17.7rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-right-one.png");
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.spider__inner .legs--right .two {
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
+  top: 14.3rem;
+  right: 1rem;
+  width: 17.7rem;
+  height: 10.0rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-right-two.png");
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.spider__inner .legs--right .three {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  top: 25rem;
+  right: 3.8rem;
+  width: 15.5rem;
+  height: 5.7rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-right-three.png");
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+.spider__inner .legs--right .four {
+  bottom: 2rem;
+  right: 6.4rem;
+  width: 14rem;
+  height: 23.3rem;
+  background-image: url("http://engage-codepen.s3.amazonaws.com/2016/spider/leg-right-four.png");
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.drip {
+  position: absolute;
+  top: -.6rem;
+  left: -.1rem;
+  -webkit-animation-name: drip;
+          animation-name: drip;
+  -webkit-animation-duration: 9s;
+          animation-duration: 9s;
+  -webkit-animation-timing-function: cubic-bezier(0.365, 0.005, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.365, 0.005, 0.355, 1);
+}
+
+.cobweb {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.engage {
+  position: relative;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  font-smoothing: antialiased;
+  text-shadow: 1px 1px 0 #FFF, 2px 2px 0 #FFF, 3px 3px 0 #FFF, 1px -1px 0 #FFF, 2px -2px 0 #FFF, 3px -3px 0 #FFF, -1px 1px 0 #FFF, -2px 2px 0 #FFF, -3px 3px 0 #FFF, -1px -1px 0 #FFF, -2px -2px 0 #FFF, -3px -3px 0 #FFF;
+}
+.engage p {
+  overflow: hidden;
+  height: 50px;
+}
+.engage a {
+  color: #333;
+  text-decoration: none;
+}
+.engage .logo {
+  position: relative;
+  top: -2.95rem;
+  display: inline-block;
+  height: 51px;
+  width: 58px;
+  line-height: 0;
+  font-size: 0;
+  background: url(http://engage-codepen.s3.amazonaws.com/engage-black.svg);
+}

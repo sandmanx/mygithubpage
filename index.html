@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<title>Sandeep Kumar Singh's Homepage</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="shortcut icon" href="images/favicon.ico" >
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+	<script type="js/loader.js"></script>
+	<script type="text/javascript">
+		// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+	</script>
+
 	<style>
 		
 	</style>
 </head>
 <body style="height:1500px" >
+<div class="se-pre-con"></div>
 <img class="img-responsive" src="images/4.png">
 <nav class="navbar-fixed-top transparent">
 	<div class="container-fluid ">
@@ -33,4 +46,5 @@
   </div>
 </nav>
 </body>
+
 </html>

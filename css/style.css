@@ -14,16 +14,16 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-.background-image {
+/*.background-image {
   position: fixed;
   left: 0;
   right: 0;
   z-index: 1;
 
-  /*display: block;*/
+  display: block;
   background: url(../images/1.png) no-repeat center center fixed;
-  /*width: 1200px;
-  height: 800px;*/
+  width: 1200px;
+  height: 800px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,6 +35,7 @@
   -ms-filter: blur(2px);
   filter: blur(2px);
 }
+*/
 
 .content {
   position: fixed;
@@ -89,4 +90,9 @@ if it's not present, don't show loader */
   height: 100%;
   z-index: 9999;
   background: url(../images/3.gif) center no-repeat #fff;
+}
+
+
+.back1 {
+  background-image: url(../images/4.png) no-repeat center center fixed;
 }
